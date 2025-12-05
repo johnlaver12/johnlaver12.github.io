@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbus A350</title>
+
+    <!-- Google Fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700;900&family=Sora:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Icons library from https://lineicons.com/docs/quickstart/installation -->
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+
+    <!-- My custom stylesheet -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- GSAP Base Library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <!-- GSAP Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body class="b612-body">
+
+    <nav>
+        <ul>
+            <li><img src="./img/Airbuslogo.svg" alt="Airbus Logo" id="navlogo" style="margin-top: 0px;"></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#specs">Specifications</a></li>
+            <li><a href="#engines">Engines</a></li>
+            <li><a href="#efficiency">Efficiency</a></li>
+            <li><a href="#routes">Airlines & Routes</a></li>
+            <li><a href="#future">Future</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div id="page">
+
+        <!-- hero section -->
+        <section id="hero">
+          <div id="hero-image-wrapper">
+            <img src="./img/a350-front.jpg" id="hero-image">
+            <div id="hero-overlay"></div>
+          </div>
+          <h1 id="hero-title">A350</h1>
+        </section>
+
+        <!-- 3d model section -->
+        <section id="model-section">
+        <div class="model-wrapper">
+
+            <h2 class="model-title">Explore the A350 in 3D</h2>
+
+            <div class="model-frame-wrapper">
+            <div class="sketchfab-embed-wrapper">
+                <iframe 
+                title="Airbus A350-1000"
+                frameborder="0"
+                allowfullscreen
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                xr-spatial-tracking
+                execution-while-out-of-viewport
+                execution-while-not-rendered
+                web-share
+                src="https://sketchfab.com/models/97577f60b81140e995d27dbb0ca36181/embed?autospin=0.3&autostart=1&preload=1&transparent=1">
+                </iframe>
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- empty section for plane flyby -->
+        <section id="flyby-zone"></section>
+
+        <!-- flying plane transition -->
+        <div class="plane-flyby">
+            <img src="./img/chinasouthern.png">
+        </div>
+
+        <!-- dark overlay during transition -->
+        <div class="plane-overlay"></div>
+
+        <!-- background -->
+        <section id="background">
+
+        <!-- background section text -->
+        <div class="background-inner">
+            <div class="background-header">
+            <h2>Background</h2>
+            <p>
+                The Airbus A350 is Airbus’s long-range flagship, designed to replace older
+                wide-bodies with a lighter, more efficient, and more comfortable platform.
+            </p>
+            </div>
+
+            <div class="background-timeline">
+            <div class="bg-event">
+                <div class="bg-year">2004</div>
+                <div class="bg-content">
+                    <h3>Program Announced</h3>
+                    <p>Airbus formally proposes the <strong>A350 program</strong> as its response to the Boeing 787.</p>
+                </div>
+            </div>
+
+            <div class="bg-event">
+                <div class="bg-year">2013</div>
+                <div class="bg-content">
+                    <h3>First Flight</h3>
+                    <p>The first <strong>A350-900 prototype</strong> rolls out in Toulouse and performs its 
+                    <strong>maiden flight</strong> on June 14.</p>
+                </div>
+            </div>
+
+            <div class="bg-event">
+                <div class="bg-year">2014</div>
+                <div class="bg-content">
+                    <h3>Enters Service</h3>
+                    <p><strong>Qatar Airways</strong> becomes the launch customer, taking delivery of the first 
+                    A350-900 in December.</p>
+                </div>
+            </div>
+
+            <div class="bg-event">
+                <div class="bg-year">2018</div>
+                <div class="bg-content">
+                    <h3>A350-1000 Launch</h3>
+                    <p>The stretched <strong>A350-1000</strong> enters service, again launched by 
+                    <strong>Qatar Airways</strong>.</p>
+                </div>
+            </div>
+
+        </div>
+
+        </section>
+        <hr class="section-divider">
+
+        <!-- design -->
+        <section id="design">
+        <div class="design-inner">
+            <div class="design-header">
+            <h2>Design</h2>
+            <p>
+                The A350’s airframe, wings, and cockpit were built as a single
+                integrated system to cut weight, reduce drag, and improve comfort.
+            </p>
+            </div>
+            <div class="design-strip">
+                <img src="./img/design/wingtip.jpg">
+                <img src="./img/design/composite.jpg">
+                <img src="./img/design/cockpit.jpg">
+                <img src="./img/design/fuselage.jpg">
+            </div>
+            <div class="design-grid">
+            <div class="design-feature">
+                <div class="design-icon">
+                <i class="lni lni-balloons"></i>
+                </div>
+                <h3>Lightweight Structure</h3>
+                <p>
+                Over <strong>70% lightweight materials</strong>, including
+                carbon-fiber reinforced polymer, titanium, and aluminum-lithium
+                alloys, reduce structural weight and increase efficiency.
+                </p>
+            </div>
+
+            <div class="design-feature">
+                <div class="design-icon">
+                <i class="lni lni-twitter-old"></i>
+                </div>
+                <h3>Advanced Wings</h3>
+                <p>
+                <strong>Curved, flexible wings</strong> dynamically change shape
+                in flight to reduce drag, improve lift, and smooth out turbulence.
+                </p>
+            </div>
+
+            <div class="design-feature">
+                <div class="design-icon">
+                <i class="lni lni-eraser-1"></i>
+                </div>
+                <h3>Smooth Fuselage</h3>
+                <p>
+                A clean, continuous <strong>fuselage design</strong> minimizes seams
+                and rivets, improving aerodynamics and lowering maintenance needs.
+                </p>
+            </div>
+
+            <div class="design-feature">
+                <div class="design-icon">
+                <i class="lni lni-game-pad-modern-1"></i>
+                </div>
+                <h3>Fly-By-Wire</h3>
+                <p>
+                A fully digital <strong>fly-by-wire system</strong> gives more precise
+                handling, flight envelope protection, and smoother control inputs.
+                </p>
+            </div>
+
+            <div class="design-feature">
+                <div class="design-icon">
+                <i class="lni lni-search-2"></i>
+                </div>
+                <h3>Glass Cockpit</h3>
+                <p>
+                The cockpit features <strong>six large touchscreen displays</strong>,
+                integrating navigation, systems, and flight data into a clean layout.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+        </section>
+
+        <!-- Specifications -->
+        <section id="specs">
+        <div class="specs-inner">
+            <div class="specs-header">
+            <h2>Specifications</h2>
+            </div>
+
+            <div class="specs-table">
+            <div class="spec-row header">
+                <div class="spec-title"></div>
+                <div class="spec-a350-900"><strong>A350-900</strong></div>
+                <div class="spec-a350-1000"><strong>A350-1000</strong></div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>First Flight</strong></div>
+                <div class="spec-a350-900">June 14, 2013</div>
+                <div class="spec-a350-1000">November 24, 2016</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Entry into Service</strong></div>
+                <div class="spec-a350-900">January 15, 2015 (Qatar Airways)</div>
+                <div class="spec-a350-1000">February 24, 2018 (Qatar Airways)</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Typical Seating</strong></div>
+                <div class="spec-a350-900">300 – 350 passengers</div>
+                <div class="spec-a350-1000">350 – 410 passengers</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Maximum Range</strong></div>
+                <div class="spec-a350-900">~ 8,100 nm (15,000 km)</div>
+                <div class="spec-a350-1000">~ 9,000 nm (16,700 km)</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Engines</strong></div>
+                <div class="spec-a350-900">2 × Rolls-Royce Trent XWB-84</div>
+                <div class="spec-a350-1000">2 × Rolls-Royce Trent XWB-97</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Cruise Speed</strong></div>
+                <div class="spec-a350-900">Mach 0.85 (903 km/h / 561 mph)</div>
+                <div class="spec-a350-1000">Mach 0.85 (903 km/h / 561 mph)</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Maximum Take-off Weight</strong></div>
+                <div class="spec-a350-900">≈ 280 t (617,000 lb)</div>
+                <div class="spec-a350-1000">≈ 319 t (703,000 lb)</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Wingspan</strong></div>
+                <div class="spec-a350-900">64.75 m (212 ft 5 in)</div>
+                <div class="spec-a350-1000">64.75 m (212 ft 5 in)</div>
+            </div>
+
+            <div class="spec-row">
+                <div class="spec-title"><strong>Overall Length</strong></div>
+                <div class="spec-a350-900">66.8 m (219 ft 2 in)</div>
+                <div class="spec-a350-1000">73.8 m (242 ft 1 in)</div>
+            </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+        </section>
+
+        <!-- engines -->
+        <section id="engines">
+        <div class="engines-inner">
+            <div class="engines-header">
+            <h2>The Engines</h2>
+            <p>
+                Every A350 is powered by the <strong>Rolls-Royce Trent XWB</strong> family.
+                One of the most efficient large turbofans ever built, designed specifically for this aircraft.
+            </p>
+            </div>
+
+            <div class="engines-layout">
+            <!-- left side, main description -->
+                <div class="engines-main">
+                    <h3>Trent XWB Family</h3>
+                    <p>
+                    The Trent XWB was engineered around long-haul efficiency: high bypass ratio,
+                    high pressure ratio, and advanced cooling to handle extreme turbine temperatures.
+                    </p>
+
+                    <h3>Two Thrust Classes</h3>
+                    <ul>
+                    <li><strong>Trent XWB-84</strong> → powers the <strong>A350-900</strong>.</li>
+                    <li><strong>Trent XWB-97</strong> → powers the <strong>A350-1000</strong>.</li>
+                    </ul>
+
+                    <p>
+                    Together, they give airlines the flexibility to operate both medium- and ultra-long-haul missions
+                    on the same airframe family.
+                    </p>
+                </div>
+
+                <!-- right side, stats card -->
+                <div class="engines-facts">
+                    <h3>Key Numbers</h3>
+
+                    <div class="engine-stat">
+                    <span class="stat-label">Thrust Range</span>
+                    <span class="stat-value">84,000 – 97,000 lb</span>
+                    </div>
+
+                    <div class="engine-stat">
+                    <span class="stat-label">Bypass Ratio</span>
+                    <span class="stat-value">≈ 9 : 1</span>
+                    </div>
+
+                    <div class="engine-stat">
+                    <span class="stat-label">Overall Pressure Ratio</span>
+                    <span class="stat-value">up to 50 : 1</span>
+                    </div>
+
+                    <div class="engine-stat">
+                    <span class="stat-label">Fan Blades</span>
+                    <span class="stat-value">Carbon-titanium composite</span>
+                    </div>
+
+                    <p class="engines-facts-note">
+                    Lightweight materials and optimized aerodynamics help cut fuel burn and
+                    emissions while keeping noise surprisingly low for a wide-body twin.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3D engine model -->
+            <div class="engine-model-wrapper">
+                <div class="sketchfab-embed-wrapper">
+                    <iframe 
+                        title="Rolls-Royce Trent 900 Turbofan Engine"
+                        frameborder="0"
+                        allowfullscreen 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/2e79c6620b0540b295c14beae25ea43a/embed?autostart=1&annotations_visible=1&ui_infos=0&ui_watermark_link=0&ui_watermark=0">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+          <hr class="section-divider">
+        </section>
+
+        <!-- efficiency -->
+        <section id="efficiency">
+        <div class="efficiency-inner">
+            <div class="efficiency-header">
+            <h2>Environmental Impact & Efficiency</h2>
+            <p>
+                The A350 was engineered for sustainability from materials to aerodynamics,
+                reducing emissions while improving passenger comfort.
+            </p>
+            </div>
+
+            <img src="./img/environment.jpg" alt="A350 Environmental Efficiency" class="efficiency-img">
+
+            <div class="efficiency-grid">
+
+            <div class="efficiency-feature">
+                <div class="efficiency-icon"><i class="lni lni-sort-high-to-low"></i></div>
+                <h3>Low-Emission Materials</h3>
+                <p>
+                Built using <strong>recyclable lightweight composites</strong>, cutting production waste and reducing structural mass.
+                </p>
+            </div>
+
+            <div class="efficiency-feature">
+                <div class="efficiency-icon"><i class="lni lni-volume-low"></i></div>
+                <h3>Reduced Noise</h3>
+                <p>
+                The A350’s noise footprint is <strong>50% smaller</strong> than previous wide-body aircraft, improving airport communities.
+                </p>
+            </div>
+
+            <div class="efficiency-feature">
+                <div class="efficiency-icon"><i class="lni lni-gauge-1"></i></div>
+                <h3>Fuel Efficiency</h3>
+                <p>
+                Achieves <strong>up to 25% lower fuel burn and CO₂ emissions per seat</strong> than the A340/B777 generation.
+                </p>
+            </div>
+
+            <div class="efficiency-feature">
+                <div class="efficiency-icon"><i class="lni lni-cloud-iot-2"></i></div>
+                <h3>Smart Systems</h3>
+                <p>
+                Optimized flight systems and <strong>digital performance monitoring</strong> ensure efficient routing and operations.
+                </p>
+            </div>
+
+            </div>
+        </div>
+
+        <hr class="section-divider">
+        </section>
+
+        <!-- routes -->
+        <section id="routes">
+        <div class="routes-inner">
+            <div class="routes-header">
+            <h2>Airlines & Routes</h2>
+            <p>Top A350 operators and their long-haul networks.</p>
+            </div>
+
+            <div class="routes-layout">
+            <!-- left, map -->
+            <div class="routes-map-panel">
+                <img
+                id="routes-map-image"
+                src="./img/maps/singapore-map.png"
+                alt="Singapore Airlines A350 Routes"
+                >
+                <div class="routes-map-grid"></div>
+                <div class="routes-map-label" id="routes-map-label">
+                Singapore Airlines – 65 A350s
+                </div>
+            </div>
+
+            <!-- right, airlines -->
+            <div class="routes-carousel-panel">
+                <div class="routes-carousel-header">
+                <span>Top A350 operators</span>
+                <div class="routes-carousel-controls">
+                    <button class="routes-arrow routes-arrow-left">&#10094;</button>
+                    <button class="routes-arrow routes-arrow-right">&#10095;</button>
+                </div>
+                </div>
+
+                <div class="routes-carousel" id="routes-carousel">
+                <!-- 1. Singapore Airlines (65) -->
+                <button
+                    class="airline-card is-active"
+                    data-map="./img/maps/singapore-map.png"
+                    data-label="Singapore Airlines – 65 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/singapore.png" alt="Singapore Airlines Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Singapore Airlines</h3>
+                    <p class="airline-base">Singapore Changi (SIN)</p>
+                    <p class="airline-routes">65 A350s · ultra-long haul to JFK, LAX, Europe</p>
+                    </div>
+                </button>
+
+                <!-- 2. Qatar Airways (58) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/qatar-map.png"
+                    data-label="Qatar Airways – 58 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/qatar.png" alt="Qatar Airways Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Qatar Airways</h3>
+                    <p class="airline-base">Doha (DOH)</p>
+                    <p class="airline-routes">58 A350s · global hub-and-spoke network</p>
+                    </div>
+                </button>
+
+                <!-- 3. Cathay Pacific (48) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/cathay-map.png"
+                    data-label="Cathay Pacific – 48 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/cathay.png" alt="Cathay Pacific Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Cathay Pacific</h3>
+                    <p class="airline-base">Hong Kong (HKG)</p>
+                    <p class="airline-routes">48 A350s · Europe, North America, Australia</p>
+                    </div>
+                </button>
+
+                <!-- 4. Air France (38) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/airfrance-map.png"
+                    data-label="Air France – 38 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/airfrance.png" alt="Air France Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Air France</h3>
+                    <p class="airline-base">Paris CDG (CDG)</p>
+                    <p class="airline-routes">38 A350s · Africa, Americas, Asia</p>
+                    </div>
+                </button>
+
+                <!-- 5. Delta Air Lines (37) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/delta-map.png"
+                    data-label="Delta Air Lines – 37 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/delta.png" alt="Delta Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Delta Air Lines</h3>
+                    <p class="airline-base">Atlanta (ATL) · Detroit (DTW)</p>
+                    <p class="airline-routes">37 A350s · trans-Pacific & trans-Atlantic</p>
+                    </div>
+                </button>
+
+                <!-- 6. Air China (30) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/airchina-map.png"
+                    data-label="Air China – 30 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/airchina.png" alt="Air China Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Air China</h3>
+                    <p class="airline-base">Beijing (PEK/PKX)</p>
+                    <p class="airline-routes">30 A350s · Europe & long-haul Asia</p>
+                    </div>
+                </button>
+
+                <!-- 7. Lufthansa (30) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/lufthansa-map.png"
+                    data-label="Lufthansa – 30 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/lufthansa.png" alt="Lufthansa Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Lufthansa</h3>
+                    <p class="airline-base">Munich (MUC) · Frankfurt (FRA)</p>
+                    <p class="airline-routes">30 A350s · global long-haul network</p>
+                    </div>
+                </button>
+
+                <!-- 8. Turkish Airlines (25) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/turkish-map.png"
+                    data-label="Turkish Airlines – 25 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/turkish.png" alt="Turkish Airlines Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Turkish Airlines</h3>
+                    <p class="airline-base">Istanbul (IST)</p>
+                    <p class="airline-routes">25 A350s · connecting Europe, Asia, Africa</p>
+                    </div>
+                </button>
+
+                <!-- 9. Japan Airlines (24) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/jal-map.png"
+                    data-label="Japan Airlines – 24 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/jal.png" alt="Japan Airlines Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Japan Airlines</h3>
+                    <p class="airline-base">Tokyo Haneda/Narita</p>
+                    <p class="airline-routes">24 A350s · domestic & regional, long-haul</p>
+                    </div>
+                </button>
+
+                <!-- 10. Ethiopian Airlines (23) -->
+                <button
+                    class="airline-card"
+                    data-map="./img/maps/ethiopian-map.png"
+                    data-label="Ethiopian Airlines – 23 A350s"
+                >
+                    <div class="airline-tail">
+                    <img src="./img/tails/ethiopian.png" alt="Ethiopian Airlines Tail">
+                    </div>
+                    <div class="airline-meta">
+                    <h3>Ethiopian Airlines</h3>
+                    <p class="airline-base">Addis Ababa (ADD)</p>
+                    <p class="airline-routes">23 A350s · pan-African & intercontinental</p>
+                    </div>
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+        </section>
+
+        <!-- future -->
+        <section id="future">
+        <div class="future-inner">
+            <div class="future-header">
+            <h2>The Future of the A350</h2>
+            <p>
+                The A350 isn’t a finished product. It’s a platform Airbus keeps evolving.
+                Future variants focus on carrying more payload, flying farther on less fuel, 
+                and shrinking the environmental footprint of long-haul travel.
+            </p>
+            </div>
+
+            <div class="future-layout">
+            <!-- left -->
+            <div class="future-copy">
+                <h3>Beyond the First Generation</h3>
+                <p>
+                Airbus is developing the <strong>A350F freighter</strong>, a dedicated cargo
+                version that uses the same efficient wing and composite fuselage while
+                replacing windows and passenger doors with a large side cargo door and
+                reinforced floor structure.
+                </p>
+                <p>
+                On the passenger side, airlines are exploring <strong>denser yet quieter
+                cabins</strong>, new premium layouts, and further range extensions that
+                push non-stop routes deeper into ultra-long-haul territory, while still
+                keeping cabin pressure, humidity, and noise at comfortable levels.
+                </p>
+                <p>
+                The airframe is also designed to evolve with <strong>sustainable aviation
+                fuels (SAF)</strong> and future engine upgrades, so the same basic platform
+                can get cleaner over time instead of being replaced.
+                </p>
+            </div>
+
+            <!-- right -->
+            <div class="future-highlight">
+                <h3>What’s Coming Next</h3>
+                <ul>
+                <li><strong>A350F:</strong> optimized long-haul freighter for lower-emission cargo.</li>
+                <li><strong>Higher SAF blends:</strong> certification for ever larger SAF percentages.</li>
+                <li><strong>Cabin refreshes:</strong> new layouts, lighting, and quieter interiors.</li>
+                </ul>
+
+                <div class="future-timeline-tag">
+                2030s • A350 as a “future-ready” long-haul family
+                </div>
+            </div>
+            </div>
+
+            <!-- bottom -->
+            <div class="future-focus-row">
+            <div class="future-focus-card">
+                <div class="future-focus-icon">
+                <i class="lni lni-box-closed"></i>
+                </div>
+                <h3>Dedicated Freighter</h3>
+                <p>
+                The A350F brings the composite fuselage and efficient wing to cargo, replacing
+                older 747 and MD-11 freighters with lower fuel burn and emissions.
+                </p>
+            </div>
+
+            <div class="future-focus-card">
+                <div class="future-focus-icon">
+                <i class="lni lni-stopwatch"></i>
+                </div>
+                <h3>Longer Non-Stops</h3>
+                <p>
+                Route planners are stretching the map with more ultra-long-haul services,
+                connecting secondary cities without hubs in between.
+                </p>
+            </div>
+
+            <div class="future-focus-card">
+                <div class="future-focus-icon">
+                <i class="lni lni-laptop-phone"></i>
+                </div>
+                <h3>Smarter Operations</h3>
+                <p>
+                Continuous data monitoring, predictive maintenance, and AI-assisted flight
+                planning help squeeze extra efficiency out of every flight.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+        </section>
+
+
+    </div>
+
+    <!-- gallery -->
+        <section id="gallery">
+          <section class="slide">
+            <div class="slide__outer">
+              <div class="slide__inner">
+                <div class="slide__content">
+                  <div class="slide__container">
+                    <h2 class="slide__heading">A350</h2>
+                    <figure class="slide__img-cont">
+                      <img class="slide__img" src="./img/gallery/a350-1.jpg">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide">
+            <div class="slide__outer">
+              <div class="slide__inner">
+                <div class="slide__content">
+                  <div class="slide__container">
+                    <h2 class="slide__heading">CABIN</h2>
+                    <figure class="slide__img-cont">
+                      <img class="slide__img" src="./img/gallery/a350-2.jpg">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide">
+            <div class="slide__outer">
+              <div class="slide__inner">
+                <div class="slide__content">
+                  <div class="slide__container">
+                    <h2 class="slide__heading">WING</h2>
+                    <figure class="slide__img-cont">
+                      <img class="slide__img" src="./img/gallery/a350-3.jpg">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide">
+            <div class="slide__outer">
+              <div class="slide__inner">
+                <div class="slide__content">
+                  <div class="slide__container">
+                    <h2 class="slide__heading">COCKPIT</h2>
+                    <figure class="slide__img-cont">
+                      <img class="slide__img" src="./img/gallery/a350-4.jpg">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="overlay">
+            <div class="overlay__content">
+              <p class="overlay__count">0<span class="count">1</span></p>
+              <figure class="overlay__img-cont">
+                <img class="image" src="./img/gallery/a350-1.jpg">
+                <img class="image" src="./img/gallery/a350-2.jpg">
+                <img class="image" src="./img/gallery/a350-3.jpg">
+                <img class="image" src="./img/gallery/a350-4.jpg">
+              </figure>
+            </div>
+          </section>
+        </section>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+
+    <!-- about me -->
+        <div class="footer-section">
+            <h4>About Me</h4>
+            <p>
+                Hi, I’m John. I'm a second year physics major here at Binghamton University as well as on the premed track.
+            </p>
+            <a href="https://www.linkedin.com/in/johnlaver/" 
+               target="_blank" 
+               class="footer-link">
+                Connect on LinkedIn →
+            </a>
+        </div>
+
+        <!-- useful links -->
+        <div class="footer-section">
+            <h4>Site Links</h4>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Cookie Preferences</a></li>
+                <li><a href="#" class="footer-link">Credits & Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- project information -->
+        <div class="footer-section">
+            <h4>Project</h4>
+            <p>
+                Airbus A350  
+                <br>Web Design Final • Fall 2025
+            </p>
+        </div>
+
+    </div>
+
+    </footer>
+
+    <!-- back to top button -->
+    <a href="#hero" id="back-to-top">▲ Back to top</a>
+
+    <!-- scripts -->
+    <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let heroOverlay = document.getElementById("hero-overlay");
+    let heroTitle   = document.getElementById("hero-title");
+    let nav         = document.querySelector("nav");
+
+        ScrollTrigger.create({
+
+        trigger: '#hero',
+        start: 'top top',
+        end: '+=100%',
+        pin: true,
+        scrub: true,
+
+        onUpdate: (self) => {
+            let p = self.progress;
+
+            heroOverlay.style.opacity = 1 - p;
+
+            let cVal = 51 + Math.round(204 * p);
+            heroTitle.style.color = "rgb(" + cVal + "," + cVal + "," + cVal + ")";
+
+            if (p >= 0.99) {
+            nav.style.display = "block";
+            } else {
+            nav.style.display = "none";
+            }
+        }
+
+        });
+
+        let planeTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#flyby-zone",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+        });
+
+        planeTl
+        .fromTo(".plane-overlay",
+            { opacity: 0 },
+            { opacity: 1, ease: "none", duration: 0.1 },
+            0
+        )
+        .fromTo(".plane-flyby",
+            { xPercent: -160, opacity: 0 },
+            { xPercent: -20, opacity: 1, ease: "none", duration: 0.3 },
+            0.05
+        )
+        .to(".plane-flyby",
+            { xPercent: 160, opacity: 0, ease: "none", duration: 0.5 },
+            0.35
+        )
+        .to(".plane-overlay",
+            { opacity: 0, ease: "none", duration: 0.1 },
+            0.6
+        );
+    
+    // routes section: tail-fin carousel + map swap
+        const carousel   = document.getElementById("routes-carousel");
+        const mapImg     = document.getElementById("routes-map-image");
+        const mapLabel   = document.getElementById("routes-map-label");
+        const cards      = document.querySelectorAll(".airline-card");
+        const leftBtn    = document.querySelector(".routes-arrow-left");
+        const rightBtn   = document.querySelector(".routes-arrow-right");
+
+        // change map when clicking a tail card
+        cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            cards.forEach(c => c.classList.remove("is-active"));
+            card.classList.add("is-active");
+
+            const newSrc   = card.getAttribute("data-map");
+            const newLabel = card.getAttribute("data-label");
+
+            if (newSrc)   mapImg.src = newSrc;
+            if (newLabel) mapLabel.textContent = newLabel;
+        });
+        });
+
+        // left/right scroll controls
+        function scrollCarousel(direction) {
+        const amount = 260;
+        carousel.scrollBy({
+            left: direction * amount,
+            behavior: "smooth"
+        });
+        }
+
+        if (leftBtn) {
+        leftBtn.addEventListener("click", () => scrollCarousel(-1));
+        }
+        if (rightBtn) {
+        rightBtn.addEventListener("click", () => scrollCarousel(1));
+        }
+
+    //reveal sections
+    const revealSections = [
+      ".background-inner",
+      ".design-inner",
+      ".specs-inner",
+      ".engines-inner",
+      ".efficiency-inner",
+      ".routes-inner",
+      ".future-inner"
+    ];
+
+    revealSections.forEach((selector) => {
+      const elem = document.querySelector(selector);
+      if (!elem) return;
+
+      gsap.from(elem, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.7,
+        ease: "power2.out"
+      });
+    });
+
+    // gallery section
+    const gallery = document.getElementById("gallery");
+    if (gallery) {
+        const sections      = gsap.utils.toArray("#gallery .slide");
+        const images        = gsap.utils.toArray("#gallery .image");
+        const slideImages   = gsap.utils.toArray("#gallery .slide__img");
+        const outerWrappers = gsap.utils.toArray("#gallery .slide__outer");
+        const innerWrappers = gsap.utils.toArray("#gallery .slide__inner");
+        const count         = gallery.querySelector(".count");
+        const wrap          = gsap.utils.wrap(0, sections.length);
+
+        let animating    = false;
+        let currentIndex = 0;
+
+        gsap.set(outerWrappers, { xPercent: 100 });
+        gsap.set(innerWrappers, { xPercent: -100 });
+
+        gsap.set(sections, { autoAlpha: 0, zIndex: 0 });
+        gsap.set(images,   { autoAlpha: 0, zIndex: 0 });
+
+        gsap.set(sections[0], { autoAlpha: 1, zIndex: 2 });
+        gsap.set(images[0],   { autoAlpha: 1, zIndex: 2 });
+
+        gsap.set(outerWrappers[0], { xPercent: 0 });
+        gsap.set(innerWrappers[0], { xPercent: 0 });
+
+      function gotoSection(index, direction) {
+        if (animating) return;
+        animating = true;
+        index = wrap(index);
+
+        let tl = gsap.timeline({
+          defaults: { duration: 1, ease: "expo.inOut" },
+          onComplete: () => { animating = false; }
+        });
+
+        let currentSection = sections[currentIndex];
+        let heading        = currentSection.querySelector(".slide__heading");
+        let nextSection    = sections[index];
+        let nextHeading    = nextSection.querySelector(".slide__heading");
+
+        gsap.set(sections, { zIndex: 0, autoAlpha: 0 });
+        gsap.set(images,   { zIndex: 0, autoAlpha: 0 });
+
+        gsap.set(sections[currentIndex], { zIndex: 1, autoAlpha: 1 });
+        gsap.set(images[currentIndex],   { zIndex: 1, autoAlpha: 1 });
+
+        gsap.set(sections[index], { zIndex: 2, autoAlpha: 1 });
+        gsap.set(images[index],   { zIndex: 2, autoAlpha: 1 });
+
+        tl
+          .set(count, { text: index + 1 }, 0.32)
+          .fromTo(
+            outerWrappers[index],
+            { xPercent: 100 * direction },
+            { xPercent: 0 },
+            0
+          )
+          .fromTo(
+            innerWrappers[index],
+            { xPercent: -100 * direction },
+            { xPercent: 0 },
+            0
+          )
+          .to(
+            heading,
+            {
+              "--width": 800,
+              xPercent: 30 * direction
+            },
+            0
+          )
+          .fromTo(
+            nextHeading,
+            {
+              "--width": 800,
+              xPercent: -30 * direction
+            },
+            {
+              "--width": 200,
+              xPercent: 0
+            },
+            0
+          )
+          .fromTo(
+            images[index],
+            {
+              xPercent: 125 * direction,
+              scaleX: 1.5,
+              scaleY: 1.3
+            },
+            { xPercent: 0, scaleX: 1, scaleY: 1, duration: 1 },
+            0
+          )
+          .fromTo(
+            images[currentIndex],
+            { xPercent: 0, scaleX: 1, scaleY: 1 },
+            {
+              xPercent: -125 * direction,
+              scaleX: 1.5,
+              scaleY: 1.3
+            },
+            0
+          )
+          .fromTo(
+            slideImages[index],
+            { scale: 2 },
+            { scale: 1 },
+            0
+          )
+          .timeScale(0.8);
+
+        currentIndex = index;
+      }
+
+      ScrollTrigger.create({
+        trigger: "#gallery",
+        start: "top top",
+        end: () => "+=" + (sections.length * window.innerHeight),
+        pin: true,
+        scrub: true,
+        onUpdate: (self) => {
+          const targetIndex = Math.round(self.progress * (sections.length - 1));
+          if (targetIndex !== currentIndex) {
+            const direction = targetIndex > currentIndex ? 1 : -1;
+            gotoSection(targetIndex, direction);
+          }
+        }
+      });
+    }
+
+  });
+</script>
+
+</body>
+</html>
